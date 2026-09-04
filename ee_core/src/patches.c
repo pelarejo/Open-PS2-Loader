@@ -169,6 +169,21 @@ static const patchlist_t patch_list[] = {
     {NULL, 0, {0x00000000, 0x00000000, 0x00000000}}                                // terminator
 };
 
+static int has_all_mode_override(const patchlist_t *generic, int mode)
+{
+    const patchlist_t *p;
+
+    for (p = patch_list; p->game; p++) {
+        if ((p->mode == mode) &&
+            (p->patch.addr == generic->patch.addr) &&
+            (p->patch.check == generic->patch.check) &&
+            (_strcmp(p->game, generic->game) == 0))
+            return 1;
+    }
+
+    return 0;
+}
+
 #define JAL(addr)      (0x0c000000 | (((addr)&0x03ffffff) >> 2))
 #define JMP(addr)      (0x08000000 | (0x3ffffff & ((addr) >> 2)))
 #define FNADDR(jal)    (((jal)&0x03ffffff) << 2)
@@ -932,7 +947,10 @@ void apply_patches(const char *path)
 
     // if there are patches matching game name/mode then fill the patch table
     for (p = patch_list; p->game; p++) {
-        if ((!_strcmp(config->GameID, p->game)) && ((p->mode == ALL_MODE) || (mode == p->mode))) {
+        if (_strcmp(config->GameID, p->game))
+            continue;
+
+        if (((p->mode == ALL_MODE) && !has_all_mode_override(p, mode)) || (mode == p->mode)) {
             switch (p->patch.addr) {
                 case PATCH_GENERIC_NIS:
                     NIS_generic_patches();
@@ -996,6 +1014,7 @@ void apply_patches(const char *path)
             }
         }
     }
+
     if (g_compat_mask & COMPAT_MODE_4)
         if (!Skip_BIK_Videos())         // First try to Skip Bink (.BIK) Videos method...
             Skip_Videos_sceMpegIsEnd(); // If - and only if the previous approach didn't work, so try to Skip Videos (sceMpegIsEnd) method.
