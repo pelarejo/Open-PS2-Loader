@@ -53,22 +53,35 @@ typedef struct
 
 static const patchlist_t patch_list[] = {
     {"SLES_524.58", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Disgaea Hour of Darkness PAL - disable cdvd timeout stuff
+    {"SLES_524.58", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Disgaea Hour of Darkness PAL - disable cdvd timeout stuff
     {"SLUS_206.66", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Disgaea Hour of Darkness NTSC U - disable cdvd timeout stuff
+    {"SLUS_206.66", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Disgaea Hour of Darkness NTSC U - disable cdvd timeout stuff
     {"SLPS_202.51", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Makai Senki Disgaea NTSC J - disable cdvd timeout stuff
+    {"SLPS_202.51", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Makai Senki Disgaea NTSC J - disable cdvd timeout stuff
     {"SLPS_202.50", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Makai Senki Disgaea (limited edition) NTSC J - disable cdvd timeout stuff
+    {"SLPS_202.50", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Makai Senki Disgaea (limited edition) NTSC J - disable cdvd timeout stuff
     {"SLPS_731.03", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Makai Senki Disgaea (PlayStation2 the Best) NTSC J - disable cdvd timeout stuff
+    {"SLPS_731.03", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Makai Senki Disgaea (PlayStation2 the Best) NTSC J - disable cdvd timeout stuff
     {"SLES_529.51", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Phantom Brave PAL - disable cdvd timeout stuff
+    {"SLES_529.51", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Phantom Brave PAL - disable cdvd timeout stuff
     {"SLUS_209.55", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Phantom Brave NTSC U - disable cdvd timeout stuff
+    {"SLUS_209.55", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Phantom Brave NTSC U - disable cdvd timeout stuff
     {"SLPS_203.45", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Phantom Brave NTSC J - disable cdvd timeout stuff
+    {"SLPS_203.45", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Phantom Brave NTSC J - disable cdvd timeout stuff
     {"SLPS_203.44", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Phantom Brave (limited edition) NTSC J - disable cdvd timeout stuff
+    {"SLPS_203.44", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Phantom Brave (limited edition) NTSC J - disable cdvd timeout stuff
     {"SLPS_731.08", BDM_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},        // Phantom Brave: 2-shuume Hajime Mashita (PlayStation 2 the Best) NTSC J - disable cdvd timeout stuff
+    {"SLPS_731.08", MMCE_MODE, {PATCH_GENERIC_NIS, 0x00000000, 0x00000000}},       // Phantom Brave: 2-shuume Hajime Mashita (PlayStation 2 the Best) NTSC J - disable cdvd timeout stuff
     {"SLUS_213.17", ALL_MODE, {PATCH_GENERIC_CAPCOM, 0x00149210, 0x00000000}},     // SFA anthology US
     {"SLES_540.85", ALL_MODE, {PATCH_GENERIC_CAPCOM, 0x00148db0, 0x00000000}},     // SFA anthology EUR
     {"SLPM_664.09", ALL_MODE, {PATCH_GENERIC_CAPCOM, 0x00149210, 0x00000000}},     // SFZ Generation JP
     {"SLPM_659.98", ALL_MODE, {PATCH_GENERIC_CAPCOM, 0x00146fd0, 0x00000000}},     // Vampire: Darkstakers collection JP
     {"SLUS_212.00", BDM_MODE, {PATCH_GENERIC_AC9B, 0x00000000, 0x00000000}},       // Armored Core Nine Breaker NTSC U - skip failing case on binding a RPC server
+    {"SLUS_212.00", MMCE_MODE, {PATCH_GENERIC_AC9B, 0x00000000, 0x00000000}},      // Armored Core Nine Breaker NTSC U - skip failing case on binding a RPC server
     {"SLES_538.19", BDM_MODE, {PATCH_GENERIC_AC9B, 0x00000000, 0x00000000}},       // Armored Core Nine Breaker PAL - skip failing case on binding a RPC server
+    {"SLES_538.19", MMCE_MODE, {PATCH_GENERIC_AC9B, 0x00000000, 0x00000000}},      // Armored Core Nine Breaker PAL - skip failing case on binding a RPC server
     {"SLPS_254.08", BDM_MODE, {PATCH_GENERIC_AC9B, 0x00000000, 0x00000000}},       // Armored Core Nine Breaker NTSC J - skip failing case on binding a RPC server
+    {"SLPS_254.08", MMCE_MODE, {PATCH_GENERIC_AC9B, 0x00000000, 0x00000000}},      // Armored Core Nine Breaker NTSC J - skip failing case on binding a RPC server
     {"SLUS_210.05", ALL_MODE, {PATCH_GENERIC_SLOW_READS, 0x00110000, 0x001ac514}}, // Kingdom Hearts 2 US - [Gummi mission freezing fix (check addr is where to patch,
     {"SLES_541.14", ALL_MODE, {PATCH_GENERIC_SLOW_READS, 0x00110000, 0x001ac60c}}, // Kingdom Hearts 2 UK - val is the amount of delay cycles)]
     {"SLES_542.32", ALL_MODE, {PATCH_GENERIC_SLOW_READS, 0x00110000, 0x001ac60c}}, // Kingdom Hearts 2 FR
@@ -115,7 +128,9 @@ static const patchlist_t patch_list[] = {
     {"SLPS_251.13", ALL_MODE, {PATCH_SOS, 0x00000000, 0x00000000}},                // Zettai Zetsumei Toshi
     {"SLES_535.08", ALL_MODE, {PATCH_ULT_PRO_PINBALL, 0x00000000, 0x00000000}},    // Ultimate Pro Pinball
     {"SLUS_200.02", BDM_MODE, {0x002c7758, 0x0000182d, 0x8c436d18}},               // Ridge Racer V (NTSC-U/C) - workaround disabling (bugged?) streaming code in favour of processing all data at once, for USB devices.
+    {"SLUS_200.02", MMCE_MODE, {0x002c7758, 0x0000182d, 0x8c436d18}},              // Ridge Racer V (NTSC-U/C) - workaround disabling (bugged?) streaming code in favour of processing all data at once, for USB devices.
     {"SCES_500.00", BDM_MODE, {0x002c9760, 0x0000182d, 0x8c43a2f8}},               // Ridge Racer V (PAL) - workaround by disabling (bugged?) streaming code in favour of processing all data at once, for USB devices.
+    {"SCES_500.00", MMCE_MODE, {0x002c9760, 0x0000182d, 0x8c43a2f8}},              // Ridge Racer V (PAL) - workaround by disabling (bugged?) streaming code in favour of processing all data at once, for USB devices.
     {"SLES_552.94", ALL_MODE, {PATCH_EUTECHNYX_WU_TID, 0x0012fcc8, 0x00000000}},   // Ferrari Challenge: Trofeo Pirelli (PAL)
     {"SLUS_217.80", ALL_MODE, {PATCH_EUTECHNYX_WU_TID, 0x0012fcb0, 0x00000000}},   // Ferrari Challenge: Trofeo Pirelli (NTSC-U/C)
     {"SLUS_205.82", ALL_MODE, {PATCH_EUTECHNYX_WU_TID, 0x0033b534, 0x00000000}},   // SRS: Street Racing Syndicate (NTSC-U/C)
@@ -910,7 +925,7 @@ void apply_patches(const char *path)
     // make sure the filename and gameid match for those patches
     // This prevents games with multiple ELF's from being corrupted by the patch
     int file_eq_gameid = !_strncmp(&path[8], config->GameID, 11); // starting after 'cdrom0:\'
-    if ((config->GameMode == HDD_MODE) || (config->GameMode == ETH_MODE))
+    if ((config->GameMode == HDD_MODE) || (config->GameMode == ETH_MODE) || (config->GameMode == MMCE_MODE))
         mode = config->GameMode;
     else
         mode = BDM_MODE;
